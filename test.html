@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="Shift_JIS">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>チームメンバー紹介</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #f6d365, #fda085);
+            margin: 0;
+            padding: 20px;
+            animation: bgmove 10s ease-in-out infinite alternate;
+            background-size: 200% 200%;
+        }
+        @keyframes bgmove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        p {
+            color: #fff;
+            font-weight: bold;
+        }
+        .member-card {
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .member-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 4px 8px 15px rgba(0,0,0,0.3);
+        }
+        .member-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .member-comment {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1> チームメンバー紹介 </h1>
+    <p>このページはGitHubハンズオン演習用です。<br>
+       自分のブランチを作成し、名前と簡単なコメントを追加してください！</p>
+    <!-- メンバーカードの例 -->
+    <div class="member-card">
+        <div class="member-name">サンプル 太郎</div>
+        <div class="member-comment">こんにちは！GitHubの練習中です。</div>
+    </div>
+        <div class="member-card">
+        <div class="member-name">廣政　貴志</div>
+        <div class="member-comment">いつもありがとうございます。</div>
+    </div>
+    <!-- 以下に自分のカードを追加してください -->
+    <!-- 例:
+    <div class="member-card">
+        <div class="member-name">あなたの名前</div>
+        <div class="member-comment">あなたのコメント</div>
+    </div>
+    -->
+    <script>
+        // 各カードの背景色をランダムに設定
+        const colors = ['#ffb3ba', '#ffdfba', '#ffffba', '#baffc9', '#bae1ff', '#d5b3ff'];
+        document.querySelectorAll('.member-card').forEach(card => {
+            card.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        });
+    </script>
+</body>
+</html>
